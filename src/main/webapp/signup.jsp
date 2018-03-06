@@ -5,56 +5,63 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Register</title>
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
-    </head>
-    <body bgcolor="silver">
+        <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" type="text/css" href="mystyle.css">
 
-    <!-- Navigation -->
-          <nav class="w3-bar w3-black">
-            <a href="index.jsp" class="w3-button w3-bar-item">Index</a>
-            <a href="second.jsp" class="w3-button w3-bar-item">second</a>
-            <a href="third.jsp" class="w3-button w3-bar-item">third</a>
-            <a href="login.jsp" class="w3-button w3-bar-item">Login</a>
-          </nav>
+</head>
 
+
+
+
+<body>
+
+ <!-- Navigation -->
+ <div id="nav-placeholder">
+ </div>
+ <script>
+ $(function(){
+   $("#nav-placeholder").load("nav.jsp");
+ });
+ </script>
+ <!-- Navigation -->
+
+
+<!-- Register Form -->
+<div class="form-style-8">
+        <h1><bold>Register</bold></h1>
+        <br>
         <form method="post" action="userRegistration.jsp">
-            <center>
-            <table border="1" width="30%" cellpadding="5">
-                <thead>
-                    <tr>
-                        <th colspan="2">Enter Information Here</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>First Name</td>
-                        <td><input type="text" name="firstName" value="" /></td>
-                    </tr>
-                    <tr>
-                        <td>Last Name</td>
-                        <td><input type="text" name="lastName" value="" /></td>
-                    </tr>
-                    <tr>
-                        <td>Email</td>
-                        <td><input type="text" name="email" value="" /></td>
-                    </tr>
-                    <tr>
-                        <td>User Name</td>
-                        <td><input type="text" name="userName" value="" /></td>
-                    </tr>
-                    <tr>
-                        <td>Password</td>
-                        <td><input type="password" name="password" value="" /></td>
-                    </tr>
-                    <tr>
-                        <td><input type="submit" value="Submit" /></td>
-                        <td><input type="reset" value="Reset" /></td>
-                    </tr>
-                    <tr>
-                        <td colspan="2">Already registered!! <a href="login.jsp">Login Here</a></td>
-                    </tr>
-                </tbody>
-            </table>
-            </center>
+            <input type="text" name="firstName" value="" placeholder="FirstName" maxlength="10" pattern=".{5,10}" required title="5 to 10 characters" required/>
+            <input type="text" name="lastName" value="" placeholder="LastName" maxlength="10" pattern=".{5,10}" required title="5 to 10 characters" required>
+           <input type="text" name="email" value="" placeholder="Email" maxlength="10" pattern=".{5,10}" required title="5 to 10 characters" required/>
+           <input type="text" name="userName" value="" placeholder="UserName" maxlength="10" pattern=".{5,10}" required title="5 to 10 characters" required/>
+            <input type="password" name="password" value="" placeholder="Password" maxlength="10" pattern=".{5,10}" required title="5 to 10 characters" required/>
+            <input type="submit" value="Register" />
+             <a href="login.jsp">Login Here</a>
         </form>
+</div>
+        <script type="text/javascript">
+            //auto expand textarea
+            function adjust_textarea(h) {
+                h.style.height = "20px";
+                h.style.height = (h.scrollHeight)+"px";
+            }
+            </script>
+ <!-- Register Form -->
+
+
+
+ <!-- Footer -->
+    <div id="footer-placeholder">
+    </div>
+    <script>
+    $(function(){
+      $("#footer-placeholder").load("footer.jsp");
+    });
+    </script>
+        <!-- Footer -->
+
+
     </body>
 </html>

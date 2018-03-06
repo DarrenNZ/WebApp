@@ -13,7 +13,8 @@
     int i = st.executeUpdate("insert into users(first_name, last_name, email, userName, password, reg_date) values ('" + firstName + "','"
     + lastName + "','" + email + "','" + userName + "','" + password + "', CURDATE())");
     if (i > 0) {
-        response.sendRedirect("welcome.jsp");
+        session.setAttribute("userid", userName);
+        response.sendRedirect("index.jsp");
 
     } else {
         response.sendRedirect("login.jsp");

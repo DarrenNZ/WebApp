@@ -23,7 +23,15 @@
     <autoscroll-to-editor value="false" />
     <autoscroll-from-editor value="true" />
     <show-object-properties value="true" />
-    <loaded-nodes />
+    <loaded-nodes>
+      <connection connection-id="ffcd80ac-d0d6-4bda-ac40-8c1b8b04e95d">
+        <schema name="mysql" object-types="column, constraint, function, index, procedure, table, dataset trigger, view" />
+        <schema name="new_schema" object-types="function, procedure, table, view" />
+        <schema name="performance_schema" object-types="function, procedure, table, view" />
+        <schema name="sys" object-types="function, procedure, table, view" />
+        <schema name="world" object-types="function, procedure, table, view" />
+      </connection>
+    </loaded-nodes>
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="ffcd80ac-d0d6-4bda-ac40-8c1b8b04e95d">
